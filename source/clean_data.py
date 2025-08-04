@@ -10,7 +10,7 @@ class Cleaner:
 
     # the relevant colomns, without commas, lower case only, export to csv file in result directory
     def cleaning(self):
-        new_df = df[['Text', 'Biased']]
+        new_df = self.data['Text', 'Biased']]
         new_df = new_df['Text'].replace(',', '', inplace=True)
         new_df = new_df['Text'].apply(lambda x: lower(x), inplace=True)
         new_df = new_df[new_df['Biased'].isin([1, 0])]
